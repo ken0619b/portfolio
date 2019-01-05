@@ -4,8 +4,7 @@ import i18next from 'i18next';
 import enLocalesTranslationJson from '../locales/en/translation'
 import jaLocalesTranslationJson from '../locales/ja/translation'
 
-i18next
-  .init({
+i18next.init({
     fallbackLng: 'en',
     debug: true,
     resources: {
@@ -22,6 +21,7 @@ class About extends Component {
 
   state = {
   }
+
   render() {
     return (
       <div>
