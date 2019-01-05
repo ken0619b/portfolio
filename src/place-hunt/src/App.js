@@ -2,9 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import About from './components/About';
 import Dashboard from './components/Dashboard';
-
-// react-route
-import { Route, Link, Switch } from 'react-router-dom'
+import { Route, Link, Switch } from 'react-router-dom'; // react-route
 
 
 class App extends Component {
