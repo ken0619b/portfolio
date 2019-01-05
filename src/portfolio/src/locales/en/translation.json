@@ -1,0 +1,12 @@
+{
+  "greeting": "Hello, I'm Kenichi",
+  "job_title": "Walking on the path of Full Stack Dev",
+  "summary": {
+    "title": "Little about me",
+    "texts": [
+      "Has 6+ years experience in proposing, designing and developing many systems for IT fields.",
+      "Has also worked as a web designer, planner and IoT developer for enhancing the capability of deliveries.",
+      "Am familiar with cutting-edge IT technologies through participating six months intensive program. "
+    ]
+  }
+}
