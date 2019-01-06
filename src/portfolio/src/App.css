@@ -2,23 +2,34 @@
 /* font */
 @import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300");
 @import url("https://fonts.googleapis.com/css?family=Reem+Kufi");
-
+@import url("https://fonts.googleapis.com/css?family=Montserrat:200,300");
 
 /* base */
 /* font-family: 'Reem Kufi', sans-serif; */
 /* font-family: 'Roboto Mono', monospace; */
+/* font-family: 'Montserrat', sans-serif; */
 
 
 /* common */
+body {
+  background-color: #FAFAFA;
+}
 
 .wrapper {
-  background-color: #FAFAFA;
   color: #4ea9da
 }
 
 a, a:link, a:visited, a:hover, a:active { 
   text-decoration: none;
   color: #fafafa; 
+}
+
+.section_header {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 2rem;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  text-align: center;
 }
 
 /* navigation */
@@ -90,6 +101,7 @@ a, a:link, a:visited, a:hover, a:active {
   height: 12rem;
   width: 20rem;
   margin: 2rem;
+  flex-grow: 1;
 }
 
 .work_item__title {
@@ -101,9 +113,11 @@ a, a:link, a:visited, a:hover, a:active {
 .work_item__desc {
   display: flex;
   padding: 0 0.5rem;
-  font-size: 0.75rem;
+  font-size: 1.25rem;
   text-align: center;
-  line-height: 1.25rem;
+  line-height: 1.5rem;
+  font-family: 'Montserrat';
+  font-weight: 300;
 }
 
 .work_item__link {
@@ -113,4 +127,23 @@ a, a:link, a:visited, a:hover, a:active {
   line-height: 1.5rem;
 }
 
+/* Comments */
+.comment_wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-flow: row wrap;
+}
 
+.comment_item {
+  /* display: flex; */
+  /* flex-direction: column; */
+  /* border-radius: 2px; */
+  height: 0.2rem;
+  width: 2rem;
+  margin: 2rem;
+  flex-grow: 1;
+  flex-shrink:1;
+  font-family: 'Montserrat';
+  font-weight: 300;
+}

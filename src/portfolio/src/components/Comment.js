@@ -54,16 +54,18 @@ class Comment extends Component {
 
   render() {
     return (
-    <div>
-      <h1>Comments from everyone !</h1>
-      <button onClick={this.commentSubmitHandler}>コメント投稿</button>
+    <section>
+    <h2 className="section_header">Comments from everyone !</h2>
+    <div className="comment_wrapper">
       {this.state.comments.map((comment, index) => {
         return (
-        <div key={index}>
-          <p>{comment}</p>
+        <div className="comment_item" key={index}>
+          <div>{comment}</div>
         </div>);
       })}
     </div>
+    <button onClick={this.commentSubmitHandler}>コメント投稿</button>
+    </section>
     )
   }
 }

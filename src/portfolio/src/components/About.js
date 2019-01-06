@@ -25,7 +25,7 @@ class About extends Component {
   render() {
     return (
       <div className="intro-wrapper">
-        <h3>{i18next.t('summary.title')}</h3>
+        <h2 className="section_header">{i18next.t('summary.title')}</h2>
         <p>{i18next.t('summary.texts.0')}</p>
         <p>{i18next.t('summary.texts.1')}</p>
         <p>{i18next.t('summary.texts.2')}</p>
