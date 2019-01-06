@@ -48,14 +48,17 @@ class Work extends Component {
 
   render() {
     return (
-    <div>
-      <h1>My Work</h1>
+    <div className="work_wrapper">
+      
       {this.state.edges.map((repo, index) => {
         return (
-        <div key={index}>
-          <p>{repo.node.name}</p>
-          <p>{repo.node.url}</p>
-          <p>{repo.node.description}</p>
+        <div className="work_item" key={index}>
+          <div className="work_item__title">{repo.node.name}</div>
+          <div className="work_item__desc">{repo.node.description}</div>
+          <div className="work_item__link">
+            <a link href={repo.node.url}>Check It !</a>
+          </div>
+          
         </div>);
       })}
        </div>

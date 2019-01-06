@@ -1,32 +1,116 @@
-.App {
+
+/* font */
+@import url("https://fonts.googleapis.com/css?family=Roboto+Mono:300");
+@import url("https://fonts.googleapis.com/css?family=Reem+Kufi");
+
+
+/* base */
+/* font-family: 'Reem Kufi', sans-serif; */
+/* font-family: 'Roboto Mono', monospace; */
+
+
+/* common */
+
+.wrapper {
+  background-color: #FAFAFA;
+  color: #4ea9da
+}
+
+a, a:link, a:visited, a:hover, a:active { 
+  text-decoration: none;
+  color: #fafafa; 
+}
+
+/* navigation */
+
+.nav {
+  background-color: rgba(250,250,250,0.50);
+  width: 100%;
+  height: 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+.nav a {
+  color: #4ea9da; 
+}
+
+.nav__item {
+  margin: 0 1rem;
+  font-size: 1.25rem;
+}
+
+.nav__item:hover {
+  border-bottom: 2px solid;
+}
+
+/* Intro */
+
+.intro-wrapper {
+  flex: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   text-align: center;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.intro-name {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 4rem;
+  margin-bottom: 0rem;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.intro-tagline {
+  font-size: 1.4rem;
+  margin: 1.5rem 0;
+}
+
+/* About */
+
+.intro-sub {
+  font-family: 'Reem Kufi', sans-serif;
+  font-size: 4rem;
+  padding-bottom: 1rem;
+}
+
+/* Work */
+.work_wrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  flex-flow: row wrap;
 }
 
-.App-link {
-  color: #61dafb;
+.work_item {
+  background-color: #4ea9da;
+  color: #fafafa;
+  display: flex;
+  flex-direction: column;
+  border-radius: 2px;
+  height: 12rem;
+  width: 20rem;
+  margin: 2rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.work_item__title {
+  padding: 1rem 1rem;
+  font-size: 1.6rem;
+  text-align: center;
 }
+
+.work_item__desc {
+  display: flex;
+  padding: 0 0.5rem;
+  font-size: 0.75rem;
+  text-align: center;
+  line-height: 1.25rem;
+}
+
+.work_item__link {
+  padding: 1rem;
+  font-size: 1rem;
+  text-align: center;
+  line-height: 1.5rem;
+}
+
+
