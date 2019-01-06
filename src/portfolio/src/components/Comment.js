@@ -1,19 +1,20 @@
 import React, { Component } from 'react';
-// import { functions } from '../plugins/firebase'
 import firebaseApp from '../plugins/firebase';
+import CustomeButton from './ui/Buttom'; //material-ui
+import CustomeTextField from './ui/TextField';
 
-//firebase database
+// firebase
 const firebaseDb = firebaseApp.database();
 const commentsRef = firebaseDb.ref('data')
 
-// functions
-// const functions = firebase.functions();
+// const functions = firebase.functions();  //cloud functions
 
 class Comment extends Component {  
   constructor(props) {
     super(props);
     this.state = {
-      comments: []
+      comments: [],
+      newComment: '',
     };
   }
   
@@ -36,6 +37,7 @@ class Comment extends Component {
   commentSubmitHandler = (event) => {
     event.preventDefault();
     console.log('the button has been clicked');
+    console.log(`new comment:${this.state.newComment}`);
 
     // firebase
     commentsRef.once('value').then((snapshot) => {
@@ -49,21 +51,30 @@ class Comment extends Component {
 
       commentsRef.set(currentComments);      
     })
-
   }
 
   render() {
     return (
-    <div>
-      <h1>Comments from everyone !</h1>
-      <button onClick={this.commentSubmitHandler}>コメント投稿</button>
-      {this.state.comments.map((comment, index) => {
-        return (
-        <div key={index}>
-          <p>{comment}</p>
-        </div>);
-      })}
-    </div>
+    <section>
+      <h2 className="section_header">Comments from everyone !</h2>
+      <div className="comment_wrapper">
+        {this.state.comments.map((comment, index) => {
+          return (
+          <div className="comment_item" key={index}>
+            <div>{comment}</div>
+          </div>);
+        })}
+      </div>
+      <div className="comment_ui_wrapper">
+        <CustomeTextField
+              id="standard-name"
+              label="Leave Your Comment Here..."
+              value={this.state.newComment}
+              margin="normal"
+            />
+        <CustomeButton onClick={this.commentSubmitHandler} >Comment</CustomeButton>
+      </div>
+    </section>
     )
   }
 }
