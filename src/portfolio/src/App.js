@@ -25,6 +25,7 @@ i18next.init({
 class App extends Component {
   render() {
     return (
+      <div>
       <div className="wrapper">
         <Switch>
           <Fragment>
@@ -42,6 +43,8 @@ class App extends Component {
             <Route path='/comment' component={Comment} />
           </Fragment>
         </Switch>
+      </div>
+      <footer className="footer">2019 Kenichi Ukai</footer>
       </div>
     )
   }

@@ -12,11 +12,14 @@
 
 /* common */
 body {
+  color: #4ea9da;
   background-color: #FAFAFA;
+  font-family: 'Roboto Mono', monospace;
 }
 
 .wrapper {
-  color: #4ea9da
+  /* color: #4ea9da; */
+  min-height: 90vh;
 }
 
 a, a:link, a:visited, a:hover, a:active { 
@@ -42,6 +45,7 @@ a, a:link, a:visited, a:hover, a:active {
   align-items: center;
   justify-content: flex-end;
 }
+
 .nav a {
   color: #4ea9da; 
 }
@@ -105,6 +109,7 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 .work_item__title {
+  font-family: 'Reem Kufi', sans-serif;
   padding: 1rem 1rem;
   font-size: 1.6rem;
   text-align: center;
@@ -116,7 +121,7 @@ a, a:link, a:visited, a:hover, a:active {
   font-size: 1.25rem;
   text-align: center;
   line-height: 1.5rem;
-  font-family: 'Montserrat';
+  font-family: 'Montserrat', sans-serif;
   font-weight: 300;
 }
 
@@ -126,9 +131,14 @@ a, a:link, a:visited, a:hover, a:active {
   text-align: center;
   line-height: 1.5rem;
 }
+.work_item__link:hover {
+  font-size: 1.5rem;
+}
 
 /* Comments */
 .comment_wrapper {
+  width: 90%;
+  margin: auto;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -136,9 +146,6 @@ a, a:link, a:visited, a:hover, a:active {
 }
 
 .comment_item {
-  /* display: flex; */
-  /* flex-direction: column; */
-  /* border-radius: 2px; */
   height: 0.2rem;
   width: 2rem;
   margin: 2rem;
@@ -147,3 +154,19 @@ a, a:link, a:visited, a:hover, a:active {
   font-family: 'Montserrat';
   font-weight: 300;
 }
+
+.comment_ui_wrapper {
+  width: 60%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+/* footer */
+.footer {
+  padding: 1rem 4rem;
+  text-align: right;
+  font-size: 0.8rem;
+}
+
