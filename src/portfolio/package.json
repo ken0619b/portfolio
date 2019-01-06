@@ -4,6 +4,9 @@
   "private": true,
   "dependencies": {
     "apollo-boost": "^0.1.23",
+    "cors": "^2.8.5",
+    "firebase": "^5.7.2",
+    "firebase-tools": "^6.2.2",
     "gh-pinned-repos": "^1.0.1",
     "graphql": "^14.0.2",
     "graphql-tag": "^2.10.0",
