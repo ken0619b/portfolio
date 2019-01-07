@@ -28,30 +28,20 @@ class Comment extends Component {
   componentDidMount(){
     // firebase read
     commentsRef.on("value", snapshot => {
+      let _comments = [];
+      if(snapshot.val()){
+        _comments = snapshot.val().comments
+      }
+      
       this.setState({
-        comments: snapshot.val().comments
+        comments: _comments
     });
     }).bind(this);
   }
 
   commentSubmitHandler = (event) => {
     event.preventDefault();
-    console.log('the button has been clicked');
-    console.log(`new comment:${this.state.newComment}`);
-
-    // firebase
-    commentsRef.once('value').then((snapshot) => {
-      // let comments = snapshot.val().comments || [];
-      // console.log(snapshot.val().comments);
-      // console.log(this.state.newComment)
-      // comments.push(this.state.newComment)
-
-      // let currentComments = {
-      //   comments: comments
-      // }
-
-      // commentsRef.set(currentComments);
-    })
+    console.log(`the button has been pressed with new comment:${this.state.newComment}`);
 
     let newComments = [...this.state.comments, this.state.newComment]
 
