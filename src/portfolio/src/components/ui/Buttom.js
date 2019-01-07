@@ -20,7 +20,7 @@ const styles = theme => ({
 
 const CustomeButton = props => {
   const { classes, children } = props;
-  return <Button variant="contained" className={classes.cssRoot} size="medium">{children}</Button>;
+  return <Button variant="contained" className={classes.cssRoot} size="medium" onClick={props.click}>{children}</Button>;
 };
 
 export default withStyles(styles)(CustomeButton);

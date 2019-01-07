@@ -41,16 +41,32 @@ class Comment extends Component {
 
     // firebase
     commentsRef.once('value').then((snapshot) => {
-      let comments = snapshot.val().comments || [];
-      console.log(snapshot.val().comments);
-      comments.push("test")
+      // let comments = snapshot.val().comments || [];
+      // console.log(snapshot.val().comments);
+      // console.log(this.state.newComment)
+      // comments.push(this.state.newComment)
 
-      let currentComments = {
-        comments: comments
-      }
+      // let currentComments = {
+      //   comments: comments
+      // }
 
-      commentsRef.set(currentComments);      
+      // commentsRef.set(currentComments);
     })
+
+    let newComments = [...this.state.comments, this.state.newComment]
+
+    commentsRef.child('comments').update(newComments);
+
+    this.setState({
+      comments: newComments,
+      newComment: ''
+    });
+  }
+
+  handleTextFieldChange = (event) => {
+    this.setState({
+        newComment: event.target.value
+    });
   }
 
   render() {
@@ -71,8 +87,9 @@ class Comment extends Component {
               label="Leave Your Comment Here..."
               value={this.state.newComment}
               margin="normal"
+              change={this.handleTextFieldChange}
             />
-        <CustomeButton onClick={this.commentSubmitHandler} >Comment</CustomeButton>
+        <CustomeButton click={this.commentSubmitHandler}>Comment</CustomeButton>
       </div>
     </section>
     )
