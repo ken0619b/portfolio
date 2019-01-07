@@ -17,7 +17,9 @@ const CustomeTextField = props => {
       id="standard-name"
       type="text"
       name="text"
+      value={props.value}
       label={label}
+      onChange={props.change}
       className={classes.textField}
       margin="normal"
       variant="outlined"
